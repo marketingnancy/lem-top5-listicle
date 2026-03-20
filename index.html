@@ -42,6 +42,18 @@ fbq('init','832767357702650');fbq('track','PageView');
       margin: 0 auto;
       padding: 0 24px;
     }
+    @media (min-width: 1200px) {
+      .article-col {
+        margin-left: 80px;
+        margin-right: auto;
+      }
+    }
+    @media (min-width: 1500px) {
+      .article-col {
+        margin-left: 120px;
+        margin-right: auto;
+      }
+    }
     @media (max-width: 767px) {
       .article-col { padding: 0 16px; }
     }
@@ -214,7 +226,7 @@ fbq('init','832767357702650');fbq('track','PageView');
         display: block;
         position: fixed;
         top: 120px;
-        right: max(24px, calc((100vw - 720px) / 2 - 340px));
+        right: 40px;
         width: 280px;
         background: var(--color-surface);
         border: 1px solid var(--color-border);
