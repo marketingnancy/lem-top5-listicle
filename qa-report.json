@@ -1,0 +1,38 @@
+{
+  "score": 99,
+  "approved": true,
+  "iterations": 1,
+  "issues_fixed": [
+    "Added 3rd CTA button after conclusion section (was only 2, need 3+)",
+    "Added trust signal near hero — intro trust callout with 4.7 stars / 15,000+ reviews / every 25 seconds stat",
+    "Moved 3 inline style attributes to <style> block (winner CTA wrap, intensity sub-labels, hidden feature-img div)",
+    "Added focus-visible styles for all interactive elements (CTA buttons, FAQ buttons, inline links, quick-nav items)",
+    "Added IntersectionObserver fallback for browsers without IO support",
+    "Added risk-removal subtext below conclusion CTA"
+  ],
+  "editorial_overrides": {
+    "skipped": [
+      "Countdown timer (N/A for editorial)",
+      "Sticky header with CTA (N/A for editorial)",
+      "Mobile sticky CTA bar (N/A for editorial)",
+      "Nancy branding in masthead (N/A for editorial)"
+    ],
+    "included": [
+      "Meta Pixel 832767357702650 (campaign exception)"
+    ]
+  },
+  "checklist_results": {
+    "html_validity": "PASS — DOCTYPE, lang, charset, viewport, title, meta description, no inline styles, no duplicate IDs",
+    "content_quality": "PASS — zero placeholder text, correct product names, copyright 2026, no forbidden words (vibrator/vibrations)",
+    "image_validation": "PASS — all 17 images exist in assets/images/, hero eager-loaded, others lazy, all have alt/width/height",
+    "accessibility": "PASS — meaningful alt text, heading hierarchy (1 h1), focus-visible styles, semantic landmarks (header/main/footer), prefers-reduced-motion",
+    "performance": "PASS — Google Fonts preconnect + font-display:swap, IntersectionObserver with fallback, null-safe JS",
+    "responsive": "PASS — no horizontal scroll triggers, 1.125rem body text (18px), CTA buttons 44px+ on mobile, max-width constrained",
+    "conversion": "PASS — 3 CTA buttons, risk-removal near each, trust signals in first screenful, 20+ inline PDP links, zero outbound links",
+    "meta_pixel": "PASS — 832767357702650 present, fires PageView on load",
+    "editorial_voice": "PASS — third-person journalistic, no Nancy branding in masthead, disclosure present, author bio present",
+    "competitor_cards": "PASS — no buy buttons, no outbound links on competitor sections",
+    "score_format": "PASS — all scores use X/10 format consistently"
+  },
+  "summary": "Production-ready. 99/100 after 1 iteration. Six issues fixed: added 3rd CTA, added hero-area trust signal, removed 3 inline styles, added focus-visible styles, added IO fallback, added risk-removal text. All editorial-specific checks pass. 20+ inline PDP links to hellonancy.com/products/lem. Zero outbound links. Zero forbidden words."
+}
