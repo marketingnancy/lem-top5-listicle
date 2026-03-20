@@ -111,9 +111,11 @@ fbq('init','832767357702650');fbq('track','PageView');
     .hero-image {
       border-radius: var(--radius);
       overflow: hidden;
+      max-height: 480px;
     }
     .hero-image img {
       width: 100%;
+      max-height: 480px;
       border-radius: var(--radius);
       object-fit: cover;
     }
@@ -532,63 +534,69 @@ fbq('init','832767357702650');fbq('track','PageView');
     }
 
     /* Deep Dive */
-    .deep-dive {
+    /* Comparison Table */
+    .comparison-section {
       padding-bottom: var(--section-gap);
     }
-    .deep-dive h2 {
+    .comparison-section h2 {
       font-family: var(--font-heading);
       font-size: clamp(1.5rem, 3vw, 2.2rem);
       text-align: center;
       margin-bottom: 8px;
     }
-    .deep-dive-sub {
+    .comparison-sub {
       text-align: center;
       color: var(--color-text-muted);
-      margin-bottom: 40px;
+      margin-bottom: 32px;
       font-size: 1rem;
     }
-    .feature-block {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-      align-items: center;
-      margin-bottom: 48px;
+    .comparison-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: var(--radius);
+      border: 1px solid var(--color-border);
     }
-    @media (min-width: 600px) {
-      .feature-block { grid-template-columns: 1fr 1fr; }
-      .feature-block.reverse .feature-img { order: -1; }
-    }
-    .feature-img img {
+    .comparison-table {
       width: 100%;
-      border-radius: var(--radius);
-      object-fit: cover;
+      min-width: 560px;
+      border-collapse: collapse;
+      font-size: 0.88rem;
     }
-    .feature-content h3 {
-      font-family: var(--font-heading);
-      font-size: clamp(1.1rem, 2vw, 1.4rem);
-      margin-bottom: 12px;
+    .comparison-table th,
+    .comparison-table td {
+      padding: 12px 14px;
+      text-align: center;
+      border-bottom: 1px solid var(--color-border);
     }
-    .feature-content p { font-size: 1rem; }
-
-    /* Intensity CSS Infographic */
-    .intensity-scale {
-      margin: 20px 0;
-      padding: 20px;
+    .comparison-table th {
       background: var(--color-surface-alt);
-      border-radius: var(--radius);
-    }
-    .intensity-bar {
-      height: 10px;
-      background: linear-gradient(90deg, #f5d5c8, var(--color-accent), #c5553a);
-      border-radius: 50px;
-      margin: 12px 0;
-    }
-    .intensity-labels {
-      display: flex;
-      justify-content: space-between;
+      font-weight: 700;
       font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
       color: var(--color-text-muted);
-      font-weight: 500;
+    }
+    .comparison-table td:first-child,
+    .comparison-table th:first-child {
+      text-align: left;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+    .highlight-col {
+      background: rgba(232, 133, 122, 0.08);
+    }
+    th.highlight-col {
+      color: var(--color-accent) !important;
+      font-size: 0.85rem !important;
+    }
+    .score-row td {
+      font-weight: 700;
+      border-bottom: none;
+      padding-top: 16px;
+    }
+    .score-row .highlight-col {
+      color: var(--color-accent);
+      font-size: 1rem;
     }
 
     /* Verdict */
@@ -627,6 +635,7 @@ fbq('init','832767357702650');fbq('track','PageView');
     }
     .verdict-image img {
       width: 100%;
+      max-height: 360px;
       border-radius: var(--radius);
       object-fit: cover;
     }
@@ -1029,7 +1038,7 @@ fbq('init','832767357702650');fbq('track','PageView');
       <h1>We Tested Every Viral Air-Pulse Toy TikTok Swears By. Here's the One That Actually Delivers.</h1>
       <div class="byline">By <span class="author">Jessica Torres</span> | March 18, 2026 | 8 min read</div>
       <div class="hero-image">
-        <img src="assets/images/product-6.jpg" alt="Nancy LEM air-pulse personal massager in lemon-yellow on a white background with a lemon wedge" loading="eager" width="720" height="720">
+        <img src="assets/images/flat-lay-water.jpg" alt="Nancy LEM submerged in crystal-clear water with bubbles" loading="eager" width="720" height="405" style="object-fit:cover; aspect-ratio:16/9;">
       </div>
     </article>
 
@@ -1264,59 +1273,82 @@ fbq('init','832767357702650');fbq('track','PageView');
       </div>
     </section>
 
-    <!-- Deep Dive -->
-    <section class="deep-dive article-col" id="deep-dive">
-      <h2 class="reveal">Why the LEM Won: A Closer Look</h2>
-      <p class="deep-dive-sub reveal">Four features that set it apart from everything else we tested.</p>
+    <!-- Head-to-Head Comparison Table -->
+    <section class="comparison-section article-col" id="comparison">
+      <h2 class="reveal">Head-to-Head: How They Stack Up</h2>
+      <p class="comparison-sub reveal">Every device scored across the five categories our testers cared about most.</p>
 
-      <div class="feature-block reveal">
-        <div class="feature-content">
-          <h3>Whisper-Quiet Motor</h3>
-          <p>Most air-pulse devices claim to be "quiet." The <a href="https://hellonancy.com/products/lem" class="inline-link">LEM</a> is the only one that delivered. At its highest setting, it's still quieter than the Satisfyer Pro 2 on medium. For anyone with roommates or thin walls, this isn't a luxury — it's essential.</p>
-        </div>
-        <div class="feature-img">
-          <img src="assets/images/product-whisperquiet.jpg" alt="Nancy LEM next to fluffy pink headphones, demonstrating whisper-quiet operation" loading="lazy" width="340" height="340">
-        </div>
-      </div>
-
-      <div class="feature-block reverse reveal">
-        <div class="feature-content">
-          <h3>12 Intensity Levels</h3>
-          <p>The <a href="https://hellonancy.com/products/lem" class="inline-link">LEM</a> offers the smoothest progression of any device we tested. Levels 1-3 are genuinely gentle (ideal for warming up). Levels 10-12 had our most experienced tester calling it "a religious experience." The range works for every body and every mood.</p>
-          <div class="intensity-scale">
-            <div class="intensity-labels">
-              <span>1 — Barely There</span>
-              <span>12 — Hold On Tight</span>
-            </div>
-            <div class="intensity-bar"></div>
-            <div class="intensity-labels intensity-sub-labels">
-              <span>Warm-up</span>
-              <span>Sweet spot</span>
-              <span>Peak</span>
-            </div>
-          </div>
-        </div>
-        <!-- No image for this feature — CSS infographic above -->
-      </div>
-
-      <div class="feature-block reveal">
-        <div class="feature-content">
-          <h3>100% Waterproof</h3>
-          <p>IPX7 rated for full submersion — bath, shower, wherever. The real advantage is cleanup: rinse under running water, pat dry, done. No crevices or petals to trap moisture. Compared to the Rose's petal-trap design, the <a href="https://hellonancy.com/products/lem" class="inline-link">LEM's</a> smooth shape is a hygiene dream.</p>
-        </div>
-        <div class="feature-img">
-          <img src="assets/images/flat-lay-water.jpg" alt="Nancy LEM submerged in water with bubbles rising around it" loading="lazy" width="340" height="340">
-        </div>
-      </div>
-
-      <div class="feature-block reverse reveal">
-        <div class="feature-content">
-          <h3>Medical-Grade Silicone</h3>
-          <p>Body-safe, hypoallergenic medical-grade silicone — the same standard used in medical implants. The <a href="https://hellonancy.com/products/lem" class="inline-link">LEM</a> feels noticeably softer than budget devices. Non-porous, easy to sanitize, gentle on sensitive skin.</p>
-        </div>
-        <div class="feature-img">
-          <img src="assets/images/product-medicalgrade.jpg" alt="Woman resting cheek against the Nancy LEM, showing the soft medical-grade silicone surface" loading="lazy" width="340" height="340">
-        </div>
+      <div class="comparison-table-wrap reveal">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th class="highlight-col">LEM</th>
+              <th>Womanizer</th>
+              <th>Satisfyer</th>
+              <th>The Rose</th>
+              <th>Tracy's Dog</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Intensity Range</td>
+              <td class="highlight-col"><strong>12 levels</strong></td>
+              <td>8 levels</td>
+              <td>11 levels</td>
+              <td>10 levels</td>
+              <td>10+10 combo</td>
+            </tr>
+            <tr>
+              <td>Noise Level</td>
+              <td class="highlight-col"><strong>Whisper</strong></td>
+              <td>Quiet</td>
+              <td>Loud</td>
+              <td>Moderate</td>
+              <td>Moderate</td>
+            </tr>
+            <tr>
+              <td>Ease of Use</td>
+              <td class="highlight-col"><strong>Instant</strong></td>
+              <td>Learning curve</td>
+              <td>Easy</td>
+              <td>Easy</td>
+              <td>Confusing</td>
+            </tr>
+            <tr>
+              <td>Waterproof</td>
+              <td class="highlight-col"><strong>IPX7</strong></td>
+              <td>IPX7</td>
+              <td>IPX7</td>
+              <td>IPX7</td>
+              <td>IPX6</td>
+            </tr>
+            <tr>
+              <td>Material</td>
+              <td class="highlight-col"><strong>Medical silicone</strong></td>
+              <td>ABS + silicone</td>
+              <td>ABS + silicone</td>
+              <td>Silicone</td>
+              <td>Silicone</td>
+            </tr>
+            <tr>
+              <td>Price</td>
+              <td class="highlight-col"><strong>$89</strong></td>
+              <td>~$129</td>
+              <td>~$40</td>
+              <td>~$30</td>
+              <td>~$45</td>
+            </tr>
+            <tr class="score-row">
+              <td>Our Score</td>
+              <td class="highlight-col"><strong>9.5 / 10</strong></td>
+              <td>8.7 / 10</td>
+              <td>8.3 / 10</td>
+              <td>8.5 / 10</td>
+              <td>7.8 / 10</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
