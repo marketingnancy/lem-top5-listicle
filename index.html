@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>We Tested Every Viral Air-Pulse Toy TikTok Swears By — The Wellness Edit</title>
+  <title>We Tested What TikTok Recommends vs. What Actually Works — The Wellness Edit</title>
   <meta name="description" content="Our testing panel spent three weeks with the top 5 air-pulse toys of 2026. Only one earned a 9.5/10. Here's the full ranking.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24'>✎</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -635,9 +635,10 @@ fbq('init','832767357702650');fbq('track','PageView');
     }
     .verdict-image img {
       width: 100%;
-      max-height: 360px;
+      max-height: 480px;
       border-radius: var(--radius);
       object-fit: cover;
+      object-position: center 40%;
     }
 
     /* Mid CTA */
@@ -676,11 +677,13 @@ fbq('init','832767357702650');fbq('track','PageView');
       margin-bottom: 14px;
     }
     .mid-cta-link {
+      display: inline-block;
       color: var(--color-accent);
       font-weight: 700;
       text-decoration: underline;
       text-underline-offset: 3px;
       font-size: 0.95rem;
+      padding: 8px 0;
       transition: color 0.2s;
     }
     .mid-cta-link:hover { color: var(--color-accent-dark); }
@@ -921,6 +924,34 @@ fbq('init','832767357702650');fbq('track','PageView');
       .reveal { opacity: 1; transform: none; transition: none; }
     }
 
+    /* Mobile padding fixes */
+    @media (max-width: 520px) {
+      .product-card { padding: 20px; }
+      .winner-body { padding: 20px; }
+      .final-cta { padding: 48px 20px; }
+    }
+
+    /* Table scroll hint on mobile */
+    @media (max-width: 600px) {
+      .comparison-table-wrap {
+        position: relative;
+      }
+      .comparison-table-wrap::after {
+        content: '';
+        position: sticky;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 24px;
+        background: linear-gradient(to right, transparent, var(--color-bg));
+        pointer-events: none;
+        display: block;
+        float: right;
+        height: 100%;
+        margin-top: -100%;
+      }
+    }
+
     /* Focus styles */
     .cta-button:focus-visible,
     .faq-question:focus-visible,
@@ -933,6 +964,24 @@ fbq('init','832767357702650');fbq('track','PageView');
 
     /* Winner CTA wrapper */
     .winner-cta-wrap { text-align: center; margin-top: 28px; }
+
+    /* Competitor CTA */
+    .competitor-cta-wrap { text-align: center; margin-top: 24px; }
+    .competitor-cta {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 12px 32px;
+      border-radius: 50px;
+      border: 2px solid var(--color-text-muted);
+      color: var(--color-text);
+      background: transparent;
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s, transform 0.2s;
+    }
+    .competitor-cta:hover { border-color: var(--color-accent); color: var(--color-accent); transform: translateY(-1px); }
 
     /* Intensity sub-labels */
     .intensity-sub-labels { font-size: 0.72rem; margin-top: 4px; }
@@ -981,7 +1030,7 @@ fbq('init','832767357702650');fbq('track','PageView');
           <span class="sidebar-score">5 / 5</span>
         </div>
         <div class="sidebar-info">
-          <div class="sidebar-name">Nancy's Lem — $85</div>
+          <div class="sidebar-name">Nancy's Lem — $89</div>
           <div class="sidebar-subtitle">My Clear Favorite</div>
           <span class="sidebar-buy">Buy Now</span>
         </div>
@@ -1035,7 +1084,7 @@ fbq('init','832767357702650');fbq('track','PageView');
     <!-- Hero -->
     <article class="hero article-col reveal" id="hero">
       <div class="category-tag">Wellness | Reviews</div>
-      <h1>We Tested Every Viral Air-Pulse Toy TikTok Swears By. Here's the One That Actually Delivers.</h1>
+      <h1>We Tested What TikTok Recommends vs. What Actually Works. The Gap Is Embarrassing.</h1>
       <div class="byline">By <span class="author">Jessica Torres</span> | March 18, 2026 | 8 min read</div>
       <div class="hero-image">
         <img src="assets/images/flat-lay-water.jpg" alt="Nancy LEM submerged in crystal-clear water with bubbles" loading="eager" width="720" height="405" style="object-fit:cover; aspect-ratio:16/9;">
@@ -1177,6 +1226,9 @@ fbq('init','832767357702650');fbq('track','PageView');
         <span>Best for: Experienced users</span>
         <span>Premium seekers</span>
       </div>
+      <div class="competitor-cta-wrap">
+        <a href="https://www.womanizer.com/us/classic-2" class="competitor-cta" target="_blank" rel="noopener">Check Price — ~$129</a>
+      </div>
     </section>
 
     <!-- #3 Satisfyer Pro 2 -->
@@ -1207,6 +1259,9 @@ fbq('init','832767357702650');fbq('track','PageView');
       <div class="best-for">
         <span>Best for: No-frills shoppers</span>
         <span>Value seekers</span>
+      </div>
+      <div class="competitor-cta-wrap">
+        <a href="https://www.satisfyer.com/us/satisfyer-pro-2-generation-3.html" class="competitor-cta" target="_blank" rel="noopener">Check Price — ~$40</a>
       </div>
     </section>
 
@@ -1240,6 +1295,9 @@ fbq('init','832767357702650');fbq('track','PageView');
         <span>Best for: First-timers on a budget</span>
         <span>Gift-friendly</span>
       </div>
+      <div class="competitor-cta-wrap">
+        <a href="https://rosetoy.com/" class="competitor-cta" target="_blank" rel="noopener">Check Price — ~$30</a>
+      </div>
     </section>
 
     <!-- #5 Tracy's Dog -->
@@ -1270,6 +1328,9 @@ fbq('init','832767357702650');fbq('track','PageView');
       <div class="best-for">
         <span>Best for: Budget explorers</span>
         <span>Dual-stim curious</span>
+      </div>
+      <div class="competitor-cta-wrap">
+        <a href="https://www.tracysdog.com/products/og-2-clitoral-sucking-vibrator-europe?_pos=5&_sid=8563015f1&_ss=r" class="competitor-cta" target="_blank" rel="noopener">Check Price — ~$45</a>
       </div>
     </section>
 
@@ -1463,7 +1524,7 @@ fbq('init','832767357702650');fbq('track','PageView');
       </div>
       <div class="final-cta-content reveal">
         <h2>Ready to Find Out What the Hype Is About?</h2>
-        <p>15,000+ women rated LEM 4.7/5. Free discreet shipping. 30-day guarantee. Plain packaging — always.</p>
+        <p>4.7 stars from 15,000+ reviews. Free discreet shipping. 30-day guarantee. Plain packaging — always.</p>
         <a href="https://hellonancy.com/products/lem" class="cta-button">Shop the LEM — $89</a>
         <div class="trust-row">
           <span>Free Discreet Shipping</span>
